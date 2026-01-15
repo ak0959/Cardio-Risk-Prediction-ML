@@ -18,13 +18,6 @@ Raw clinical data was transformed to ensure biological and statistical validity:
 * **Feature Engineering**: Age was converted from days to years, and **BMI** was calculated to provide standard clinical context.
 * **Outlier Management**: Instances where blood pressure readings were physically impossible (e.g., diastolic higher than systolic) were removed to ensure data integrity.
 
-> **[PLACE CHART 1 HERE]**
-> **Description**: *Numerical Variable Distribution (Age, Height, Weight)*
-> **Source**: *Section **4.1.1** (Univariate Analysis - Numerical Variables)*.
-> **Impact**: Visualizes the range and spread of physical attributes in the patient population.
-
-
-
 ### 2.2 Baseline Modeling: Linear SVM
 We first established a performance baseline using a Linear SVM:
 * **Outcome**: The model achieved a **0.7232 training accuracy** but suffered from a "no-skill" result on the test set (AUC 0.49).
@@ -41,7 +34,6 @@ To capture non-linear interactions, we implemented a Decision Tree:
 > **Impact**: Proves that **Age**, **Systolic BP (`ap_hi`)**, and **BMI** are the dominant predictors of disease risk.
 
 
-
 ### 2.4 Optimization via Grid Search
 We used **Grid Search** with 5-fold cross-validation to prune the tree and find a stable middle ground:
 * **Optimized Parameters**: `max_depth: 5` and `min_samples_leaf: 20`.
@@ -56,13 +48,6 @@ We used **Grid Search** with 5-fold cross-validation to prune the tree and find 
 | **Training Accuracy** | 0.7232 | 0.9943 | **0.7232** |
 | **Testing Accuracy** | 0.4947 | 0.4844 | **0.4947** |
 | **Testing Recall** | 1.0000 | 0.7446 | **1.0000** |
-
-> **[PLACE CHART 3 HERE]**
-> **Description**: *ROC Curve and Precision-Recall Plot*
-> **Source**: *Section **7.6** (ROC Analysis) and Section **7.9** (Precision-Recall Curve)*.
-> **Impact**: Visualizes the model's ability to identify disease risk compared to a random baseline.
-
-
 
 ---
 
