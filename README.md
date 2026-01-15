@@ -28,12 +28,6 @@ To capture non-linear interactions, we implemented a Decision Tree:
 * **The Overfitting Issue**: Without constraints, the tree hit **99.4% training accuracy**.
 * **Generalization Failure**: Testing accuracy dropped to **48.4%**, indicating the model was learning noise rather than transferable medical patterns.
 
-> **[PLACE CHART 2 HERE]**
-> **Description**: *Feature Importance Horizontal Bar Chart*
-> **Source**: *Section **6.1** (Feature Importance)*.
-> **Impact**: Proves that **Age**, **Systolic BP (`ap_hi`)**, and **BMI** are the dominant predictors of disease risk.
-
-
 ### 2.4 Optimization via Grid Search
 We used **Grid Search** with 5-fold cross-validation to prune the tree and find a stable middle ground:
 * **Optimized Parameters**: `max_depth: 5` and `min_samples_leaf: 20`.
