@@ -48,14 +48,7 @@ We used **Grid Search** with 5-fold cross-validation to prune the tree and find 
 ## 🧪 4. Conclusion & Clinical Insights
 1. **Generalization over Accuracy**: High training scores (99%) are often a warning sign of overfitting. Real clinical utility requires depth constraints to handle noisy medical data.
 2. **Prioritizing Sensitivity**: The final model achieved a **1.00 Recall** on the test set, ensuring that no high-risk patients are missed—a critical priority in healthcare settings.
-3. **Future Recommendations**: Moving toward **Ensemble Methods** like Random Forest or Gradient Boosting is recommended to further improve precision while maintaining the stability achieved through Grid Search.
-
-> **[PLACE CHART 4 HERE]**
-> **Description**: *Confusion Matrix - Optimized DT (Testing Set)*
-> **Source**: *Section **8.6** (Optimized Decision Tree - Testing Set)*.
-> **Impact**: Visualizes final classification quality and the model's bias toward high sensitivity.
-
-
+3. **Future Recommendations**: Moving toward **Ensemble Methods** like Random Forest or Gradient Boosting is recommended to further improve precision while maintaining the stability achieved through Grid Search
 
 ---
 
